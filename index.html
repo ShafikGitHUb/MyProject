@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- style css -->
+     <link rel="stylesheet" href="style.css">
+     <!-- dasi + tawild css -->
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- google icon -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <!-- icon -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <!-- google fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<!-- form section start -->
+     <form class="fieldset bg-white border-base-300 rounded-box w-xs border p-4 mx-auto mt-10">
+        <div class="mx-auto">
+            <img class="mx-auto mb-4" src="Images/github-logo.png" alt="">
+            <h2 class="text-center font-bold text-xl">GitHub Issues Tracker</h2>
+            <p class="text-center opacity-70">Sign in to manage your issues</p>
+        </div>
+  <fieldset class="fieldset">
+    <label class="label">User Name</label>
+    <input id="username" type="text" class="input validator" placeholder="Enter User Name" required />
+    <p class="validator-hint hidden">Required</p>
+  </fieldset>
+
+  <label class="fieldset">
+    <span class="label">Password</span>
+    <input id="password" type="password" class="input validator" placeholder="Enter Password" required />
+    <span class="validator-hint hidden">Required</span>
+  </label>
+  <button id="login-btn" class="btn btn-primary" type="submit">sign In</button>
+  <div class="divider my-1">OR</div>
+    <p class="text-sm opacity-70 mb-2 text-center">Demo Credentials:</p>
+   <div class="bg-base-200 p-4 rounded-lg text-center mb-2">
+ <p><strong>Username:</strong> admin</p>
+<p><strong>Password:</strong> admin123</p>
+   </div>
+</form>
+    <script src="js/script.js"></script>
+</body>
+</html>
