@@ -7,6 +7,9 @@ const buttons = document.querySelectorAll("#btn-section button"); // 3 buttons
 const issueCountEl = document.querySelector(".flex.items-center.gap-3 h2");
 let allIssues = [];
 const loading = document.getElementById("loading");
+const searchInput = document.getElementById("search-input");
+const searchBtn = document.getElementById("search-btn");
+
 // protita cart er api function suru
    
 async function loadIssues() {
@@ -152,3 +155,23 @@ buttons.forEach(btn => {
     filterIssues(btn.textContent);
   });
 });
+
+
+// SEARCH  START
+
+async function searchIssues() {
+  const searchValue = searchInput.value;
+
+  const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchValue}`);
+  const data = await res.json();
+  displayIssue(data.data);
+  updateCount(data.data.length);
+}
+
+// enter press search
+searchInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    searchIssues();
+  }
+});
+
