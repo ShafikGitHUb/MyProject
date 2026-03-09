@@ -9,19 +9,13 @@ let allIssues = [];
 const loading = document.getElementById("loading");
 const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-btn");
-
-
-
-
 // protita cart er api function suru
 // async function loadIssues() {
 //   const response = await fetch('https://phi-lab-server.vercel.app/api/v1/lab/issues');
 //   const data = await response.json();
 //   displayIssue(data.data);
-//   console.log("Adding Hidden");
 
 // }
-
 
 // protita cart er api function suru call hoa aslo
 
@@ -169,11 +163,13 @@ buttons.forEach(btn => {
 
 async function searchIssues() {
   const searchValue = searchInput.value;
-
+   loading.classList.remove("hidden");
   const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchValue}`);
   const data = await res.json();
   displayIssue(data.data);
   updateCount(data.data.length);
+  loading.classList.add("hidden");
+   
 }
 
 // enter press search
