@@ -10,19 +10,24 @@ const loading = document.getElementById("loading");
 const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-btn");
 
+
+
+
 // protita cart er api function suru
-   
-async function loadIssues() {
-  const response = await fetch('https://phi-lab-server.vercel.app/api/v1/lab/issues');
-  const data = await response.json();
-  displayIssue(data.data);
-}
+// async function loadIssues() {
+//   const response = await fetch('https://phi-lab-server.vercel.app/api/v1/lab/issues');
+//   const data = await response.json();
+//   displayIssue(data.data);
+//   console.log("Adding Hidden");
+
+// }
+
+
 // protita cart er api function suru call hoa aslo
 
 function displayIssue(data) {
   container.innerHTML = ''; // clear old cards
   data.forEach(issue => {
-    console.log(issue);
   const card = document.createElement('div');
   // card a click korle modal asbe
   card.addEventListener("click", () => {
@@ -57,7 +62,8 @@ card.innerHTML = `  <div class="flex justify-between items-start mb-4">
     container.appendChild(card);
   });
 }
-
+// Call all card
+loadIssues();
 
 // modal start
 async function openModal(id) {
@@ -107,8 +113,7 @@ async function openModal(id) {
     modalId.appendChild(modalBox);
     my_modal_5.showModal();
 }
-// Call all card
-loadIssues();
+
 
 
 // Filter Button
@@ -119,6 +124,9 @@ async function loadIssues() {
   displayIssue(allIssues);
   updateCount(allIssues.length);
   setActiveButton("All");
+  
+   loading.classList.add("hidden");
+
 }
 function filterIssues(status) {
   let filtered;
