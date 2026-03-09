@@ -23,4 +23,16 @@ And we used filter() method to filter anything. after filtering we find the filt
 forEach() used for looping when we need array looping we used for of loop or forEach loop 
 
 
-4 Answer : 
+4 Answer : Arrow function introduced ES6. using the arrown syntax => : example-
+             const add =()=>{
+                console.log("Hello");
+             }
+             add();
+
+5 Answer : It's come to new after introduced ES6. written as a `` and ${} syntan use into notation ``;
+          const name = "Shafik";
+          const Para = `Hello, ${name}.`;
+          console.log(para); 
+          output :  Hello, Shafik.
+
+   
