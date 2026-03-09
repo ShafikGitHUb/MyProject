@@ -1,3 +1,5 @@
+
+
 const loginBtn = document.getElementById("login-btn");
 
 loginBtn.addEventListener("click", function(e){
@@ -11,7 +13,7 @@ loginBtn.addEventListener("click", function(e){
 
     if(userName === "admin" && password === "admin123"){
         alert("Login Successful");
-        // অন্য page এ যাবে
+        // page Change
         window.location.assign("./home.html");
     }
     else{

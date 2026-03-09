@@ -1,9 +1,9 @@
-// sob id ana akhane
 
+// sob id  and class akhane
 const container = document.getElementById('card-container');
 const modal = document.getElementById("issue_modal");
 const closeBtn = document.getElementById("modal-close");
-const buttons = document.querySelectorAll("#btn-section button"); // 3 buttons
+const buttons = document.querySelectorAll("#btn-section button");
 const issueCountEl = document.querySelector(".flex.items-center.gap-3 h2");
 let allIssues = [];
 const loading = document.getElementById("loading");
@@ -171,8 +171,6 @@ async function searchIssues() {
   loading.classList.add("hidden");
    
 }
-
-// enter press search
 searchInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     searchIssues();
